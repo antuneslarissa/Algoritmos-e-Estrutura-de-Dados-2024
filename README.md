@@ -10,20 +10,18 @@ c)Explique e exemplifique as estruturas: Array, Lista, fila, pilha.
 
 Array: é uma estrutura de dados fundamental em programação que permite armazenar uma coleção de elementos do mesmo tipo sob um único nome. Onde dependendo da arquitetura do sistema, podemos adotar duas maneiras para trabalharmos com a alocação de memória: Estático: Ao criar um array, pré-definimos a quantidade máxima de registros. Dinâmico: Existe um método para aumentar a capacidade dinamicamente.
 Exemplo array estatico: 
+//classe
 public class ArrayEstaticoExemplo {
     public static void main(String[] args) {
         int[] arrayEstatico = new int[3];
-
-        arrayEstatico[0] = 10;
-        arrayEstatico[1] = 20;
-        arrayEstatico[2] = 30;
-
-        for (int i = 0; i < arrayEstatico.length; i++) {
-            System.out.println("Elemento " + i + ": " + arrayEstatico[i]);
-        }
-    }
 }
-Exemplo arrey dinamico:
+
+Exemplo array dinamico:
+//classe
+public class ArrayDinamicoExamplo {
+    public static void main(String[] args) {
+        Array<Integer> arrayDinamico = new ArrayList<>();
+}
 
 Lista: 
 Fila:
