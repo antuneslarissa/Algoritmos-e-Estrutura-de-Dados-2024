@@ -11,12 +11,14 @@ c)Explique e exemplifique as estruturas: Array, Lista, fila, pilha.
 Array: é uma estrutura de dados fundamental em programação que permite armazenar uma coleção de elementos do mesmo tipo sob um único nome. Onde dependendo da arquitetura do sistema, podemos adotar duas maneiras para trabalharmos com a alocação de memória: Estático: Ao criar um array, pré-definimos a quantidade máxima de registros. Dinâmico: Existe um método para aumentar a capacidade dinamicamente.
 
 Exemplo array estatico: 
+
 //classe
 public class ArrayEstaticoExemplo {
         int[] arrayEstatico = new int[3];
 }
 
 Exemplo array dinamico:
+
 //classe
 public class ArrayDinamicoExamplo {
    int[] numeros;
@@ -29,6 +31,7 @@ public class ArrayDinamicoExamplo {
 Lista: pode ser implementada usando a interface List, que define uma sequência de elementos ordenados. Uma das implementações mais comuns dessa interface é o ArrayList, que oferece uma lista redimensionável que cresce automaticamente conforme os elementos são adicionados. 
 
 Exemplo lista:
+
 //ArrayList
 public class ListaExemplo {
         List<String> lista = new ArrayList<>();
@@ -50,6 +53,7 @@ public class ListaExemplo {
 Fila: nessa estrutura de dados é aplicado o conceito de que o "primeiro a entrar, primeiro a sair" (FIFO - First-In-First-Out), ou seja o primeiro elemento inserido na fila será o primeiro a ser removido, esse é um dos padrões mais utilizados nos projetos.
 
 Exemplo fila:
+
 //Criando uma fila com LinkedList
 public class Fila{
     Queue<String> fila = new LinkedList<>();
@@ -72,6 +76,7 @@ public class Fila{
 Pilha: nessa estrutura de dados é aplicado o conceito de que o Último a Entrar é Primeiro a Sair (LIFO): O elemento mais recentemente adicionado é o primeiro a ser removido. O padrão de pilha é comumente utilizado em programação para realizar operações como desfazer ações (undo), rastreamento de chamadas de função, análise de expressões matemáticas e muito mais.
 
 Exemplo pilha:
+
 public class Pilha {
         // Criando uma pilha
         Stack<String> pilha = new Stack<>();
