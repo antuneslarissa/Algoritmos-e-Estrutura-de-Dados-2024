@@ -1,7 +1,5 @@
 package ListaEstatica;
 
-import Exemplos.NoLista;
-
 public class ListaEstaticaL1 {
 	
 	private int[] info;
