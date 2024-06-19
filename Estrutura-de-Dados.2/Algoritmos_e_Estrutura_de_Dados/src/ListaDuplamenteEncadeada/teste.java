@@ -31,7 +31,7 @@ public class teste<T> {
         
         //extra obter no
         try {
-            NoListaDupla<Integer> no = lista.obterNo(1);
+            NoListaDupla<Integer> no = lista.obterNo(0);
             System.out.println("Nó na posição: " + no.getInfo()); // Deve imprimir 10
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Posição inválida");

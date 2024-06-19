@@ -1,16 +1,12 @@
 package ListaDuplamenteEncadeada;
 
-/**
- * 
- * @autor Larissa Zózimo Antunes
- */
-public class ListaDupla <T>{
+public class ListaDuplaCircular <T>{
 	
 	private NoListaDupla<T> primeiro;
 	
 	
 	
-	public ListaDupla(){
+	public ListaDuplaCircular(){
 		primeiro = null;
 	}
 	
@@ -218,33 +214,6 @@ public class ListaDupla <T>{
 
         return false;
     }
-    
-    
-    
-    public ListaDupla<T> criarSubLista(int inicio, int fim) {
-        
-        if (inicio < 0 || inicio > fim) {
-            throw new IndexOutOfBoundsException("Inválido"); 
-        }
-        ListaDupla<T> newList = new ListaDupla<>();
-        NoListaDupla<T> newNo = this.getPrimeiro();
-       
-        int posicao = 0;
 
-        while (posicao < inicio) {
-            newNo = newNo.getProximo(); 
-            posicao++; 
-        }
-
-       
-        while (posicao <= fim && newNo != null) {
-            
-            newList.inserir(newNo.getInfo());
-            newNo = newNo.getProximo(); 
-            posicao++; 
-        }
-
-        return newList;
-    }
     
 }
