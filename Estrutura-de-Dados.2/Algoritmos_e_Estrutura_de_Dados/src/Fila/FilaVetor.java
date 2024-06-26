@@ -1,16 +1,17 @@
 package Fila;
 
 public class FilaVetor <T> implements Fila<T>{
-    /*
-     * formula para inserir de forma circular
-     * 
-     * tamanho + inicio
-     * quando o limite for < que tamanho + inicio
-     * (tamanho + inicio) - limite
-     * ou 
-     * (tamanho + inicio)%limite(resto da divisão)
-     * tamanho-1;
-     */
+   
+		/*
+	     * formula para inserir de forma circular
+	     * 
+	     * tamanho + inicio
+	     * quando o limite for < que tamanho + inicio
+	     * (tamanho + inicio) - limite
+	     * ou 
+	     * (tamanho + inicio)%limite(resto da divisão)
+	     * tamanho-1;
+	     */
 	
 	    @SuppressWarnings("unchecked")
 		private T[] info;
@@ -102,10 +103,6 @@ public class FilaVetor <T> implements Fila<T>{
 	        
 	        return retorno.toString();
 	    }
-		
-	
-		
-		
 
 		public void encolher() {
 			@SuppressWarnings("unchecked")
@@ -118,7 +115,6 @@ public class FilaVetor <T> implements Fila<T>{
 				indice = (indice + 1) % limite;
 				auxilia++;
 			}
-
 			info = newlistfila;
 			limite = tamanho;
 			inicio = 0;

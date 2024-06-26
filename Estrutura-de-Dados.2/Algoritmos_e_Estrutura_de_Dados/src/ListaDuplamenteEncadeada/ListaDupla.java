@@ -222,28 +222,38 @@ public class ListaDupla <T>{
     
     
     public ListaDupla<T> criarSubLista(int inicio, int fim) {
-        
+    	// Verifica se os índices são válidos
         if (inicio < 0 || inicio > fim) {
             throw new IndexOutOfBoundsException("Inválido"); 
         }
+        
+        // Cria uma nova lista dupla para armazenar a sublista
         ListaDupla<T> newList = new ListaDupla<>();
+        // Inicializa newNo com o primeiro nó da lista atual
         NoListaDupla<T> newNo = this.getPrimeiro();
        
+        // Variável para rastrear a posição atual na lista
         int posicao = 0;
 
+        // Avança até o índice de início
         while (posicao < inicio) {
+        	 // Move para o próximo nó
             newNo = newNo.getProximo(); 
+            // Incrementa a posição
             posicao++; 
         }
 
-       
+        // Adiciona os nós à nova lista até o índice de fim
         while (posicao <= fim && newNo != null) {
-            
+        	// Insere a informação do nó atual na nova lista
             newList.inserir(newNo.getInfo());
+            // Move para o próximo nó
             newNo = newNo.getProximo(); 
+            // Incrementa a posição
             posicao++; 
         }
-
+        
+        // Retorna a sublista criada
         return newList;
     }
     

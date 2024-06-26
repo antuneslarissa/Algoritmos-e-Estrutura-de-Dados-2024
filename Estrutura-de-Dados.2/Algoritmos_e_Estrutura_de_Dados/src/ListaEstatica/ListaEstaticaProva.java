@@ -115,18 +115,22 @@ public class ListaEstaticaProva <T>{
 	}
 	
 	 public void inserir(int posicao, T valor) {
+		 	// Verifica se a posição é válida
 	        if (posicao < 0 || posicao > tamanho) {
 	            throw new IndexOutOfBoundsException("posicao invalida");
 	        }
 	
+	     // Verifica se o array está cheio e redimensiona se necessário
 	        if (tamanho == info.length) {
 	            redimensionar();
 	        }
 	
+	     // Desloca os elementos para abrir espaço na posição especificada
 	        for (int i = tamanho; i > posicao; i--) {
 	            info[i] = info[i - 1];
 	        }
-	
+	        
+	        // Insere o novo valor na posição especificada
 	        info[posicao] = valor;
 	        tamanho++;
 	}
