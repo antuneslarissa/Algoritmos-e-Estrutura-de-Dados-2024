@@ -1,5 +1,8 @@
 package Arvore;
-
+/**
+ * 
+ * @autor Larissa Zózimo Antunes
+ */
 	import java.util.ArrayList;
 	import java.util.List;
 

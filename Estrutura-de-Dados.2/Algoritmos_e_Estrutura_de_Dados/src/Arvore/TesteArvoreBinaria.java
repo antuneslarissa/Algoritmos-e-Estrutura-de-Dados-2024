@@ -1,5 +1,8 @@
 package Arvore;
-
+/**
+ * 
+ * @autor Larissa Zózimo Antunes
+ */
 public class TesteArvoreBinaria {
     public static void main(String[] args) {
         testArvoreVazia();

@@ -1,4 +1,8 @@
 package Fila;
+/**
+ * 
+ * @autor Larissa Zózimo Antunes
+ */
 public class NoLista<T> {//T identificando que é um parametro
 
 	private T info;

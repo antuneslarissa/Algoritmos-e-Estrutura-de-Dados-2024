@@ -1,5 +1,8 @@
 package Fila;
-
+/**
+ * 
+ * @autor Larissa Zózimo Antunes
+ */
 import Pilha.NoLista;
 
 public class FilaLista<T> implements Fila<T> {

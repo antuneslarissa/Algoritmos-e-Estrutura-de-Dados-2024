@@ -1,5 +1,8 @@
 package Arvore;
-
+/**
+ * 
+ * @autor Larissa Zózimo Antunes
+ */
 public class ArvoreBinaria<T> {
     private NoArvoreBinaria<T> raiz;
 
