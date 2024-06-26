@@ -125,7 +125,7 @@ public class ListaEstaticaProva <T>{
 	            redimensionar();
 	        }
 	
-	     // Desloca os elementos para abrir espaço na posição especificada
+	     //Desloca os elementos para abrir espaço na posição especificada
 	        for (int i = tamanho; i > posicao; i--) {
 	            info[i] = info[i - 1];
 	        }
