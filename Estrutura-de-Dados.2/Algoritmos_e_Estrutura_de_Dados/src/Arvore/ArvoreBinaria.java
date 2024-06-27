@@ -76,17 +76,20 @@ public class ArvoreBinaria<T> {
     public int contarFolhas() {
         return contarFolhas(raiz);
     }
-
-    private int contarFolhas(NoArvoreBinaria<T> no) {
-        if (no == null) {
-            return 0;
-        }
-        if (no.getEsquerda() == null && no.getDireita() == null) {
-            return 1;
-        }
-        return contarFolhas(no.getEsquerda()) + contarFolhas(no.getDireita());
+    
+   
+    public int contarFolhas(NoArvoreBinaria<T> sa) {
+    	if(sa == null) {//faz a verificaçao pra ver se o no atual é nulo
+    		return 0;//se for nulo, ou seja, se nao tiver folhas indica que o ramo esta vazio, portanto retornará retornar 0
+    	}
+    	
+    	if(sa.getEsquerda() == null && sa.getDireita() == null) {//faz a verificaçao pra ver se o no atual é uma "folha". Se tem filhos na esquerda ou direita
+    		return 1;//se for uma "folha", retorna 1
+    	}
+    	
+		return contarFolhas(sa.getEsquerda())+contarFolhas(sa.getDireita());//se não for uma "folha", chama o metodo de forma recursiva para os "filhos" da esqueda e da direita e retorna a soma do numero de folhas
     }
-
+    
     @SuppressWarnings("unused")
 	private boolean isDegenerada(NoArvoreBinaria<T> no) {
         if (no == null) {

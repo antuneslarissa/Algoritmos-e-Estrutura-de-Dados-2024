@@ -106,22 +106,25 @@ public class FilaVetor <T> implements Fila<T>{
 	        
 	        return retorno.toString();
 	    }
-
+		
+		@SuppressWarnings("unchecked")
 		public void encolher() {
-			@SuppressWarnings("unchecked")
-			T[] newlistfila = (T[]) new Object[tamanho];
-			int indice = inicio;
-			int auxilia = 0;
-
-			while (auxilia < tamanho) {
-				newlistfila[auxilia] = info[indice];
-				indice = (indice + 1) % limite;
-				auxilia++;
+			T[] novalistaFila = (T[]) new Object[tamanho]; //Ciração de um novo array com tamanho igual ao número de elementos da lista
+			
+			int indice = inicio; //crio a variavel indice que é inicializada para a posição de inicio
+			int aux = 0;//crio  uma variavel auxiliar para rastrear a posição no novalistaFila
+			
+			while(aux < tamanho) { //este while copia os elementos do antigo array para o novalistaFila
+				novalistaFila[aux] = info[indice]; //copia o elemento da posicao "indice" do array antigo para a posiçao "aux" do novo array
+				indice = (indice + 1) % limite;//Atualiza o indice. Move para a proxima poxiçao e pode "circular" de volta caso seja necessário
+				aux++;//incrementa a variável auxiliar("aux")
 			}
-			info = newlistfila;
-			limite = tamanho;
-			inicio = 0;
+			
+			info = novalistaFila;// substitui o array antigo pelo novalistaFila que é o novo array encolhido
+			limite = tamanho; //Utiliza o limite para armazenar o novo tamanho
+			inicio = 0;//O indice é reiniciadp, voltando para 0
 		}
+		
 }
 	
 	
